@@ -1,0 +1,26 @@
+$fa-font-path: "../fonts";
+$fa-version:"4.6.3" !default;
+$body_bg: #faf8f0;
+$font_size: 16;
+$normalwidth: 1680;
+$wide: 1201;
+$desktop: 1200;
+$laptop: 992;
+$tablet: 768;
+$phone: 480;
+
+
+@import 'common/greating';
+@import 'common/flip';
+@import 'common/mixin';
+@import 'common/adjustment';
+@import 'common/font';
+@import "common/footer";
+@import "common/paralax";
+@import "common/preloader";
+@import "common/input";
+@import "common/works";
+@import "common/slider";
+@import "common/form";
+@import "common/footerworkc";
+@import "common/about";

@@ -1,0 +1,108 @@
+.conteiner--works_bg {
+  background-image: url("../img/sand.jpg");
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: 3000px auto;
+  width: 6000px;
+  @include centered();
+  height: 100%;
+  transform: translate3d(-3000px,0,0);
+  animation: bg 120s linear infinite;
+  @include phone(){
+    display: none;
+  }
+}
+
+.conteiner--works-wrapper {
+  @include centered();
+  overflow: hidden;
+}
+.about_block1  {
+  width: 100%;
+  height: 100%;
+  @include clearfix();
+  //@include fullscreen();
+}
+
+
+.about_block1-left ,.about_block1-right{
+  width: 50%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 0 rem(20);
+@include desktop(){
+  float: none;
+  width: 100%;
+  height: 100%;
+}
+}
+
+.about_block1-left{
+  float: left;
+
+}
+.about_block1-right{
+  float: right;
+}
+.about_block1-right-step1, .about_block1-right-step2{
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+
+}
+.about_block1-right-step1 {
+  position: relative;
+  overflow: hidden;
+  @include flex_center-row();
+
+}
+.mini {
+  height: 100%;
+}
+.mini,.about_block1-right--right  {
+   text-align: center;
+  @include desktop(){
+    height: 10%;
+    @include flex_center-colum();
+    margin-top: 0;
+  }
+}
+.max {
+  @include desktop(){
+    height: 90%;
+  }
+}
+
+.about_block1-right-step1 img {
+height: 50vh;
+
+}
+.corect_about {
+ display: inline !important;
+  @include tablet(){
+    display: inline !important;
+    width: auto !important;
+  }
+}
+
+
+.about_block1-right-step1-p  a{
+ color:  #29C3AD;
+ display: inline;
+}
+.about_block1-right-step2-corect {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+}
+.about_block1-right-step2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.about_block1-right-step1-h3 {
+  color: #4d5963;
+
+  font-size: 1.75rem;
+}

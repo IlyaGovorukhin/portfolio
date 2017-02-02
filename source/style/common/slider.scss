@@ -1,0 +1,228 @@
+.slider {
+  height: 100vh;
+  width: 100%;
+  @include clearfix;
+  min-height: rem(650);
+  background: #f0efe9;
+  @include fullscreen();
+
+
+}
+.slider_block1 {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include tablet(){
+    height: 30% !important;
+  }
+}
+.slider_block2 {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  @include tablet(){
+    height: 70% !important;
+  }
+}
+.slider_block1, .slider_block2 {
+  width: 50%;
+  height: 100%;
+  @include tablet(){
+    width: 100%;
+    margin: rem(5) 0;
+  }
+}
+.slider_block2-down, .slider_block2-up {
+
+  @include clearfix;
+  height: 100%;
+  width: 100%;
+
+
+}
+
+
+.slider_block-centr {
+  width: 100%;
+  display: none;
+
+}
+.upgrad {
+  width: 60%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 1.85rem;
+}
+.display_block {
+  display: inline-block;
+}
+.slider_block-centr--p {
+  color: #20b5a1;
+  border-top: rem(1) solid #20b5a1;
+  border-bottom: rem(1) solid #20b5a1;
+  width: 70%;
+  text-align: center;
+  text-transform: uppercase;
+  margin: rem(30) auto;
+  padding: rem(18) 0;
+  @include tablet(){
+    padding: 0;
+    margin: rem(15) auto;
+  }
+}
+
+//.word{
+//  margin: 0 rem(15);
+//}
+.slider_block2-up--box {
+  height: 70%;
+}
+.char {
+
+  display: inline-block;
+  animation-name: bounceIn;
+  animation-fill-mode: both;
+  animation-duration: 0.7s;
+
+  $charCount: 30;
+
+  @for $i from 0 through $charCount {
+    &.char--#{$i} {
+      animation-delay: ($i * 0.05s);
+    }
+  }
+}
+
+.slider_block2-up--boxLeft, .slider_block2-up--boxRight {
+  position: relative;
+  height: 30%;
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.slider_block2-up--boxLeft {
+  float: left;
+
+}
+
+.slider_block2-up--boxRight {
+  float: right;
+}
+.slider_block-up--up, .tap2 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  img {
+    box-sizing: border-box;
+    padding: 5%;
+    max-width: 100%;
+    max-height: 100%;
+    @include centered();
+  }
+}
+.active {
+  top: 0;
+}
+.slider_block-up--button---up, .slider_block-up--button---down {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(182, 180, 174, 0.8);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  a{
+    display: block;
+    @include centered();
+  }
+
+}
+
+.slider_block-up--button---up a, .slider_block-up--button---down a {
+  &:hover {
+    &:before{
+    transform: translate3d(0, 50%, 0);
+  }
+  }
+  &:before {
+  content: '';
+    z-index: 2;
+    @include centered();
+    width: rem(50);
+    height: rem(32);
+    transition: transform 0.3s, -webkit-transform 0.3s;
+
+
+}
+
+}
+.slider_block-up--button---down a {
+   &:before {
+     background-image: url("../img/down.svg");
+     background-repeat: no-repeat;
+     background-position: center;
+
+   }
+ }
+.slider_block-up--button---up a {
+  &:before {
+    background-image: url("../img/up.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+}
+.slider_block2-up--box {
+  position: relative;
+}
+.slider_block2-up--box img {
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  padding: 10%;
+  @include centered();
+
+}
+.slider_block-centr--a {
+  width: rem(200);
+  height: rem(50);
+  background-color: #00bfa5;
+  margin: 0 auto;
+  border-radius: rem(5);
+  color: #fcfcfc;
+  text-align: center;
+  line-height: rem(50);
+  transition: background-color .4s;
+  cursor: pointer;
+  position: relative;
+  &:hover {
+  background-color:  rgba(0, 150, 136, 0.85)
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: rem(22);
+    height: rem(22);
+    background-image: url("../img/link.svg");
+    background-repeat: no-repeat;
+
+  }
+}

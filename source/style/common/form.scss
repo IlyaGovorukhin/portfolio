@@ -1,0 +1,99 @@
+//.correct {
+//  &:before{
+//    @include phone() {
+//      right: 0;
+//    }
+//  }
+//  &:after{
+//    @include phone() {
+//      left: 0;
+//    }
+//  }
+//}
+.pageform {
+ background-image: url("../img/bgsia.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 80vh !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  @include fullscreen();
+}
+
+
+
+.pageform-wrapper {
+   position: relative;
+  height: rem(396);
+  overflow: hidden;
+  border-radius: rem(7);
+
+  @include wide {
+    width: rem(380);
+  }
+
+  @include desktop {
+    width: rem(380);
+  }
+  @include laptop {
+    width: rem(380);
+  }
+  @include tablet {
+    width: rem(350);
+  }
+  @include phone {
+    width: rem(300);
+  }
+}
+.positin_blur {
+  position: relative;
+  border-radius: rem(5) rem(5) 0 0;
+  overflow: hidden;
+}
+.positin_blur-ofset {
+  @include centered();
+  filter: blur(rem(20));
+  background-image: url("../img/bgsia.png");
+background-repeat: no-repeat;
+background-position-x: center;
+
+
+
+
+}
+.position-Zindex {
+  z-index: 1;
+}
+.bor-rad {
+  border-radius: rem(5);
+}
+.conteiner_center-up--input.bor-rad {
+  resize: none;
+}
+.welcome-nav__item--Pull,.welcome-nav__item--Clin {
+max-width: 50%;
+}
+.pageform-arrow {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  cursor: pointer;
+  //margin-top: rem(100);
+  margin-left: - rem(21.5);
+  &:hover {
+    path {
+      fill-opacity: 1;
+    }
+  }
+  @include wide(){
+    margin-top: -14px;
+  }
+
+
+
+}

@@ -1,0 +1,67 @@
+{
+  "welcomeMenu" : {
+    "works" : {
+      "href" : "works.html",
+      "title" : "Мои работы"
+    },
+    "about" : {
+      "href" : "about.html",
+      "title" : "Обо мне"
+    },
+    "blog" : {
+      "href" : "blog.html",
+      "title" : "Контакты"
+    }
+  },
+  "socials": {
+    "vk" : {
+      "href" : "https://vk.com/igovorukhin"
+    },
+    "Github" : {
+      "href" : "https://github.com/IlyaGovorukhin"
+    },
+    "LinkedIn" : {
+      "href" : "https://www.linkedin.com/in/kat-oleynick-17509091?trk=nav_responsive_tab_profile_pic"
+
+    }
+  },
+  "auto": {
+    "Back": {
+      "href": "",
+      "title" : "На главную"
+    },
+    "Enter": {
+      "href": "works.html",
+      "title" : "Войти"
+    }
+  },
+  "Email": {
+  "Pull": {
+    "href": "",
+    "title" : "Отправить"
+    },
+  "Clin": {
+    "href": "works.html",
+    "title" : "Очистить"
+    }
+  },
+  "Nav": {
+    "Block1": {
+      "href": "works.html",
+      "title" : "Мои работы"
+    },
+    "Block2": {
+      "href": "about.html",
+      "title" : "Обо мне"
+    },
+    "Block3": {
+      "href": "blog.html",
+      "title" : "Контакты"
+    },
+    "Block4": {
+      "href": "index.html",
+      "title" : "Авторизация"
+    }
+  }
+
+}

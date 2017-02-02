@@ -1,0 +1,111 @@
+.footerwork {
+  position: relative;
+  background: #000000;
+  @include wide {
+    height: rem(150);
+    margin-top: - rem(150);
+  }
+
+  @include desktop {
+    height: rem(150);
+    margin-top: - rem(150)
+  }
+  @include laptop {
+    height: rem(230);
+    margin-top: - rem(230)
+  }
+
+}
+.footerwork_up, .footerwork_down {
+  height: 50%;
+
+
+}
+.footerwork_up {
+  background-color: #2e4246;
+  width: 100%;
+  border-bottom: rem(1) solid #fff;
+  @include clearfix();
+}
+.footerwork_down {
+
+  background-color: #53595c;
+}
+.footerwork_up_left, .footerwork_up_right {
+height: 100%;
+  @include wide {
+    width: 50%;
+  }
+
+  @include desktop {
+    width: 50%;
+  }
+  @include laptop {
+    width: 100%;
+    height: 50%
+  }
+}
+.footerwork_up_left {
+  float: left;
+}
+
+.footerwork_up_right {
+  float: right;
+}
+.footer-nav, .footerwork_up_left-p {
+  list-style: none;
+
+  @include laptop() {
+    @include flex_center-row();
+  }
+}
+.footer-nav {
+  height: 100%;
+}
+.footerwork_up_left-p {
+  @include laptop() {
+    text-align: center;
+  }
+}
+.footerwork_up_left-p p, .footerwork_up_left-p p {
+  color: #fff;
+  margin-left: rem(20);
+  margin-right:  rem(20);
+}
+.footerwork_up_left-p_right {
+  float: right;
+}
+
+.footer-nav li {
+  display: inline-block;
+  height: 100%;
+  @include flex_center-colum();
+  float: left;
+  margin: 0 rem(20) ;
+  @include laptop() {
+    @include flex_center-row();
+  }
+  @include tablet() {
+    margin: 0 rem(5)
+  }
+}
+.footer-nav li a {
+  text-decoration: none;
+  font-family: Roboto-Light;
+  color: #fff;
+}
+.footerwork_up_right {
+  @include laptop() {
+    @include flex_center-row();
+  }
+
+}
+.footerwork_up_right-social{
+  width: 35%;
+  float: right;
+  height: 100%;
+  @include flex_center-colum();
+  @include laptop() {
+    float: none;
+  }
+}

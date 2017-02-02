@@ -1,0 +1,15 @@
+mixin navigation(className, items)
+    ul(class=className)
+        if (items)
+            each item, ndx in items
+                li(class= className + "__item " + className + "__item--" + ndx)
+                    a(class=className + "__link" + item.class   href=item.href)= item.title
+
+mixin socialnavigation(className, items)
+    ul(class=className)
+        if (items)
+            each item, ndx in items
+                li(class= className + "__item ")
+                    a(href=item.href target="_blank"  class =className + "__item--" + ndx )
+
+

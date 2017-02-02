@@ -1,0 +1,30 @@
+.flip-back.div_hide
+    .conteiner_center
+        .conteiner_center-up--font
+            .conteiner_center-up--textback  Авторизация
+            .conteiner_center-up--autoback
+                form.conteiner_center-up--form
+                     .conteiner_center-up--dsail
+                         .conteiner_center-up--dsail---img
+                            img(src='assets/img/pasword.png').conteiner_center-up--img
+                         input(name='login' placeholder="Логин" required).conteiner_center-up--input
+                     .conteiner_center-up--dsail
+                         .conteiner_center-up--dsail---img
+                            img(src='assets/img/login.png').conteiner_center-up--img
+                         input(name='pasword' placeholder="Пароль"  required).conteiner_center-up--input
+                     .conteiner_center-up--valid
+                         .conteiner_center-up--valid--pick
+                                 input(type="checkbox" id="sem" name='ishuman').conteiner_center-up--valid--checkbox
+                                 label.conteiner_center-up--valid--label(for="sem") Я человек
+                     .conteiner_center-up--valid
+                             span Вы точно не робот?
+                     .conteiner_center-up--valid
+                         .conteiner_center-up--valid--pick
+                             input(type="radio" id="semr" name='notrobot' value='yes' ).conteiner_center-up--valid--radio
+                             label.conteiner_center-up--label--radio(for="semr") Да
+                         .conteiner_center-up--valid--pick
+                             input(type="radio" id="seml" name='notrobot' value='no').conteiner_center-up--valid--radio
+                             label.conteiner_center-up--label--radio(for="seml") Не уверен
+
+        .conteiner_center-down
+            +navigation("welcome-nav", auto)

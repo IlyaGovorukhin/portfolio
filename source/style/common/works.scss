@@ -1,0 +1,58 @@
+
+
+.conteiner--works_bloc1 {
+  width: 100%;
+  display: flex;
+  background-image: url("../img/works_header.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 12rem;
+
+
+
+
+}
+.conteiner_works-step1 {
+  position: absolute;
+  width: 100%;
+  bottom: -2%;
+
+}
+.conteiner_text {
+  margin-top: 0;
+
+  font-size: rem(64);
+  &:after,  &:before  {
+    top: 2rem;
+  }
+  @include tablet(){
+    font-size: rem(55);
+    width: 70%;
+  }
+
+
+}
+
+.conteiner_wrapper {
+  position: relative;
+  min-height: 600px;
+  &:after {
+    content: '';
+    display: block;
+    position: relative;
+    @include wide {
+      height: rem(150);
+    }
+
+    @include desktop {
+      height: rem(150);
+    }
+    @include laptop {
+      height: rem(230);
+    }
+  }
+}
