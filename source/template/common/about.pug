@@ -14,14 +14,22 @@
                     Здесь можно посмотреть мой профиль на<a class="" href="http://www.upwork.com/o/profiles/users/_~018309ff1e76ea2ef1/">Upwork</a>,где я иногда занимаюсь фрилансом.
                 p.about_block1-right-step1-p.
                     Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.
-    .about_block1-right
+    .about_block1-right.svgblock
         .about_block1-right--right
             .conteiner_center-up--textback.conteiner_text.corect_about Скилы
         p.about_block1-right-step1-p.
             Больше всего меня привлекет Frontend, но я также знакома и могу решать несложные задачи на Backend. Но давайте по порядку.
-        .about_block1-right-step1-h3.
-            Frontend
-        .about_block1-right-step1-h3.
-            Backend
-        .about_block1-right-step1-h3.
-            WorkFlow
+        .about_block1-right-step1-h3 Frontend
+            +skills('skills', skills.Frontend )
+
+            //.about_block1-right-step1-svg
+            //    svg.svgCircl(width="100%" height="100%" fill='none')
+            //         circle( stroke="#ccc")
+            //         circle(stroke="#e8a731")
+            //    .about_block1-right-step1-text Pug
+        .about_block1-right-step1-h3 Backend
+            +skills('skills', skills.Backend)
+        .about_block1-right-step1-h3 WorkFlow
+            +skills('skills', skills.WorkFlow)
+
+

@@ -10,7 +10,7 @@
 }
 .conteiner {
   @include fullscreen;
-    @include phone {
+    @include phone_up(){
       background-image: url("../img/mountains.jpg");
       background-repeat: no-repeat;
       background-size: cover;

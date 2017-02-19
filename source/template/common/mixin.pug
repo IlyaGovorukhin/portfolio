@@ -5,6 +5,7 @@ mixin navigation(className, items)
                 li(class= className + "__item " + className + "__item--" + ndx)
                     a(class=className + "__link" + item.class   href=item.href)= item.title
 
+
 mixin socialnavigation(className, items)
     ul(class=className)
         if (items)
@@ -12,4 +13,21 @@ mixin socialnavigation(className, items)
                 li(class= className + "__item ")
                     a(href=item.href target="_blank"  class =className + "__item--" + ndx )
 
+mixin skills(className, items)
+    ul(class=className)
+        if (items)
+            each item, ndx in items
+                li(class= className + "__item ")
+                        svg(class= className + "__item--svg " + className + "__item--"  + ndx)
+                            circle(stroke="#ccc")
+                            circle(stroke="#e8a731")
+                        div(class= className + "__item--text " + ndx)= item.title
 
+
+mixin navigatContact(className, items)
+    ul(class=className)
+        if (items)
+            each item, ndx in items
+                li(class= className + "__item " + className + "__item--" + ndx)
+                    img(class= className + "__svg"  src = item.svg)
+                    a(class=className + "__link" href=item.href)= item.title

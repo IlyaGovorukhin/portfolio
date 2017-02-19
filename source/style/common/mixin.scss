@@ -78,6 +78,11 @@
     @content;
   }
 }
+@mixin phone_up() {
+  @media screen and (max-width: $phone_up + px) {
+    @content;
+  }
+}
 @mixin phone() {
   @media screen and (max-width: $phone + px) {
     @content;
@@ -152,3 +157,12 @@
   }
 }
 
+@keyframes shake {
+  0%{
+    stroke-width: rem(-1);
+  }
+
+  100%{
+    stroke-width: rem(2);
+  }
+}

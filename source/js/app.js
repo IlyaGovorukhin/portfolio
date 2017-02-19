@@ -1,13 +1,20 @@
 $(document).ready(function () {
-    'use strict';
 
+
+    'use strict';
    // resizeBlur
     model.resizeBlur();
+
     //.preloader
-    const url = $('.Buttton_point').hasClass('about_block1');
+    const url = $('.Buttton_point').hasClass('about_block1'),
+          url1 = $('.Buttton_point').hasClass('conteiner--works_blog-block');
     if(url){
         $('.preloder').css('background-image', 'url("assets/img/bg2.jpg"')
     }
+    if(url1){
+        $('.preloder').css('background-image', 'url("assets/img/night_prel_bg.jpg"')
+    }
+
     $('body').find('*').not('.preloder').addClass('div_hide')
     const imgs = [],
            vids = [];
@@ -66,6 +73,10 @@ $(document).ready(function () {
             contentReady.done(()=>{
                $('.preloder').addClass('div_hide');
                 $('body').find('*').not('.preloder').removeClass('div_hide')
+                //addgradient
+                $('.conteiner--works_star').css({
+                    'background': 'linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)'
+                })
                 }
             )
         }
@@ -199,7 +210,30 @@ $(document).ready(function () {
                         'background-position-y' : 41.7 + y  + '%'
                     })
                 }
+            },
+//scroll_svg
+            scroll_svg:()=>{
+
+           $('.skills__item--svg').map((i,e)=>{
+
+                $(e).find(':last-child').animate({
+                    'stroke-dashoffset' : '0'
+                },1500)
+                    //204 408
+           })
+            },
+//menuButton
+            menuButton: ()=> {
+                $('.conteiner--works-menu-center').toggleClass('visibl');
+                $('.footerwork').toggleClass('displayNone');
+                $('.conteiner_wrapper').toggleClass('overHeight');
+                $('.nave-menu__linkundefined').toggleClass('textanim');
+                $('.conteiner--works-menu').toggleClass('animside');
+
+
             }
+
+
         };// - ПредставленияF
         const model = {
  //paralax
@@ -235,6 +269,17 @@ $(document).ready(function () {
                  let minusTop = e/90;
 
                  vies.scroll_paralax(minusTop);
+            },
+//scroll_svg
+            scroll_svg: (e)=>{
+                if($('.svgblock').length){
+                let svgOffset = $('.svgblock').offset().top,
+                    svgHeight =   $('.svgblock').height()/2,
+                    point =svgOffset-svgHeight;
+                if(e > point) {
+                    vies.scroll_svg();
+                }}
+
             },
 //slider
             counter: 2,
@@ -305,6 +350,10 @@ $(document).ready(function () {
                     pros = ($('.pageform').width() - $('.positin_blur-ofset').width())/200;
                   vies.resizeBlur(pozwidth,pros)
 
+            },
+// menuButton
+            menuButton: ()=>{
+               vies.menuButton();
             }
 
         };// - Модель
@@ -329,8 +378,9 @@ $(document).ready(function () {
 //scroll
             scroll_paralax: ()=> {
                 $(window).on('scroll', ()=>{
-                    let scrollTop =    $(window).scrollTop();
+                    let scrollTop = $(window).scrollTop();
                     model.scroll_paralax(scrollTop);
+                    model.scroll_svg(scrollTop);
                 })
             },
 // slider
@@ -358,9 +408,14 @@ $(document).ready(function () {
                 $(window).resize(()=>{
                     model.resizeBlur();
                 })
+            },
+            menuButton: ()=>{
+                $('.conteiner_works-humburger').on('click', (e)=>{
 
-
+                    model.menuButton();
+                })
             }
+
 
 
         };// - Контроллер
@@ -370,8 +425,128 @@ $(document).ready(function () {
         controller.scroll_paralax();
         controller.paralax();
         controller.flip();
+        controller.menuButton();
 
 
+
+
+
+
+
+function iniMap(){
+       let
+       mapDiv = document.getElementById('map'),
+       mapDiv1 = document.getElementById('map1'),
+       isDraggable;
+       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+           isDraggable = false;
+} else {
+isDraggable = true;
+}
+
+let mapOptions = {
+   center: {
+        lat: 55.853396,
+        lng: 37.5002
+},
+        zoom: 13,
+        disableDefaultUI: true,
+        scrollwheel: false,
+        draggable: isDraggable,
+        styles: [{
+        "featureType": "administrative",
+        "elementType": "labels.text.fill",
+        "stylers": [{"color": "#444444"}]
+        }, {
+        "featureType": "administrative.country",
+        "elementType": "geometry.fill",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "administrative.country",
+        "elementType": "geometry.stroke",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "administrative.country",
+        "elementType": "labels.text",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "administrative.country",
+        "elementType": "labels.text.fill",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "administrative.country",
+        "elementType": "labels.text.stroke",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "administrative.country",
+        "elementType": "labels.icon",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [{"color": "#f2f2f2"}]
+        }, {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "poi.attraction",
+        "elementType": "all",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "poi.business",
+        "elementType": "all",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "poi.government",
+        "elementType": "all",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "poi.medical",
+        "elementType": "all",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "poi.park",
+        "elementType": "all",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "poi.place_of_worship",
+        "elementType": "all",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "poi.sports_complex",
+        "elementType": "all",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [{"saturation": -100}, {"lightness": 45}, {"visibility": "off"}]
+        }, {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [{"visibility": "simplified"}]
+        }, {
+        "featureType": "road.arterial",
+        "elementType": "labels.icon",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "transit.station",
+        "elementType": "all",
+        "stylers": [{"visibility": "off"}]
+        }, {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [{"color": "#6a6966"}, {"visibility": "simplified"}]
+        }]
+        }
+
+       let map = new google.maps.Map(mapDiv , mapOptions),
+           map1 = new google.maps.Map(mapDiv1 , mapOptions)
+}
 
 
 

@@ -62,6 +62,68 @@
       "href": "index.html",
       "title" : "Авторизация"
     }
-  }
+  },
+  "skills": {
+    "Frontend": {
+      "name1": {
+        "title": "HTML"
+      },
+      "name2": {
+        "title": "css"
+      },
+      "name3": {
+        "title": "bla"
+      }
+    },
+    "Backend": {
+      "name1": {
+        "title": "awe"
+      },
+      "name2": {
+        "title": "awesd, sera, ewrwe, wweq"
+      },
+      "name3": {
+        "title": "bqwela"
+      },
+      "name4": {
+        "title": "qwea"
+      }
+    },
+    "WorkFlow": {
+      "name1": {
+        "title": "qwe2"
+      },
+      "name2": {
+        "title": "wwww, 222, aaaa"
+      },
+      "name3": {
+        "title": "rtyu"
+      },
+      "name4": {
+        "title": "ererw ere"
+      }
+    }
+  },
+  "contact": {
+    "skape": {
+        "href": "skype:kevin11032011?add",
+        "title": "kevin11032011",
+        "svg": "../assets/img/contact/skype.svg"
+    },
+    "tel": {
+      "href":"teL:+89680082827",
+       "title": "89680082827",
+       "svg": "../assets/img/contact/phone.svg"
+    },
+    "email": {
+      "href": "mailto:govoruxin3@mail.ru",
+      "title": "govoruxin3@mail.ru",
+      "svg": "../assets/img/contact/envelope.svg"
+    },
+    "marker": {
+      "title": "Москва",
+      "svg": "../assets/img/contact/map_marker.svg"
+    }
 
+  }
 }
