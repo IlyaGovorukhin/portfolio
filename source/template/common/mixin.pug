@@ -3,7 +3,7 @@ mixin navigation(className, items)
         if (items)
             each item, ndx in items
                 li(class= className + "__item " + className + "__item--" + ndx)
-                    a(class=className + "__link" + item.class   href=item.href)= item.title
+                    a(class=className + "__link" + item.class + ' ' + ndx  href=item.href)= item.title
 
 
 mixin socialnavigation(className, items)
@@ -31,3 +31,11 @@ mixin navigatContact(className, items)
                 li(class= className + "__item " + className + "__item--" + ndx)
                     img(class= className + "__svg"  src = item.svg)
                     a(class=className + "__link" href=item.href)= item.title
+
+
+mixin navigationPush(className, items)
+    ul(class=className)
+        if (items)
+            each item, ndx in items
+                li(class= className + "__item " + className + "__item--" + ndx)
+                    input(class=className + "__link" + item.class + ' ' + ndx  type=item.type value=item.title )

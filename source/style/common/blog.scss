@@ -14,11 +14,14 @@
 
 }
 .conteiner--works_star svg g {
-  transform: translate(-360px, -1100px)
+  transform-origin: 50% 50%;
+  transform: translate(-360px, -1100px);
 }
 
 
 .conteiner--works_star svg g path {
+  transform-origin: 50% 50%;
+  transform: scale(.8);
   stroke-width: rem(0.5);
    animation: shake 1s linear  alternate infinite;
 }

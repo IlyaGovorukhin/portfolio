@@ -83,6 +83,184 @@ $(document).ready(function () {
     };
 })
 
+const sendEmail = (function (){
+
+	let initInside = function () {
+		_setUpListners();
+
+	};
+
+   let _setUpListners = function () {
+      $('.Pull').on('click', _sendform)
+      $('.conteiner_center-up--input').on('click', setwith)
+       // $('.Clin').on('click', _clinform)
+
+
+    }
+    // function _clinform(e) {
+    //     e.preventDefault();
+    // }
+
+    function setwith(e){
+        validation.setWhit($(this));
+    }
+
+
+    function _sendform(e){
+        e.preventDefault();
+        let form = $('.conteiner_center-up--form');
+        if(validation.init(form)){
+            _sendAjax(form)
+        }
+    }
+
+
+    function _sendAjax(form) {
+         let data = JSON.stringify(form.serializeArray());
+        console.log(posName,posEmail,posText)
+        $.ajax({
+            type: "POST",
+            url: "assets/js/send.php",
+            data: data,
+            cache: false,
+            success: function(s) {
+                console.log(s)
+            }
+
+
+        })
+        return false;
+
+    }
+    return {
+    	init: initInside
+
+    };
+
+
+})();
+
+sendEmail.init();
+
+const validation = (function (){
+     function _setRed(e) {
+         e.css({
+             'background-color': '#ea5d5d'
+         })
+     }
+    function _setWhit(e) {
+        e.css({
+            'background-color': '#fff'
+        })
+    }
+    function _validateEmail(email) {
+        let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    let  initInside = function (form) {
+
+        let elem = form.find('input, textarea'),
+            valid = true,
+            massage;
+
+        elem.map((k,e)=>{
+            let elem = $(e);
+            if(elem.val() == 0){
+              _setRed(elem);
+              valid = false;
+              massage = 'Вы не заполнили все поля'
+
+            }
+
+            if(elem.attr('type')  == "email" ){
+               if(!_validateEmail(elem.val())){
+              _setRed(elem);
+                valid = false;
+              massage = 'email не корректный';
+
+               }
+            }
+
+        })
+          if(massage !== 0){
+              modalWindow.modalMassag(massage)
+
+          }
+
+      return valid;
+    }
+
+    return {
+    	init: initInside,
+        setRed: _setRed,
+        setWhit: _setWhit
+    };
+})();
+
+
+
+var modalWindow = (function (){
+
+	var initInside = function () {
+		_setUpListners();
+	};
+	function _showMassag(msg) {
+        $('.modal').css({
+            'display': 'block'
+        })
+       $('.modal_center-text').text(msg);
+    }
+
+
+
+    var  _setUpListners = function () {
+            $('.modal_center-button').on('click', _hideMasseg)
+    }
+    
+    function _hideMasseg(e) {
+        e.preventDefault();
+
+        $('.modal').css({
+            'display': 'none'
+        })
+        $('.modal_center-text').text('');
+    }
+    
+    return {
+    	init: initInside,
+        modalMassag: _showMassag
+    };
+})();
+modalWindow.init();
+
+
+var buttonAnim = (function (){
+
+	var initInside = function () {
+		_setUpListners();
+
+	};
+
+    var  _setUpListners = function () {
+        $('.conteiner_works-humburger').on('click', _bAnim)
+    }
+
+    function _bAnim(e) {
+        document.getElementById("humburger_line1").classList.toggle("movelineOne")
+        document.getElementById("humburger_line2").classList.toggle("movelineTwo")
+        document.getElementById("humburger_line3").classList.toggle("movelineThree")
+  }
+    return {
+    	init: initInside
+    };
+
+
+})();
+
+buttonAnim.init();
+
+
 
         const vies = {
 //paralax

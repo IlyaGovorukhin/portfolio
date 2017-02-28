@@ -21,7 +21,7 @@
       "href" : "https://github.com/IlyaGovorukhin"
     },
     "LinkedIn" : {
-      "href" : "https://www.linkedin.com/in/kat-oleynick-17509091?trk=nav_responsive_tab_profile_pic"
+      "href" : "https://www.upwork.com/freelancers/~01e6b33e62e7e33423"
 
     }
   },
@@ -37,12 +37,12 @@
   },
   "Email": {
   "Pull": {
-    "href": "",
-    "title" : "Отправить"
+    "title" : "Отправить",
+     "type" : "submit"
     },
   "Clin": {
-    "href": "works.html",
-    "title" : "Очистить"
+    "title" : "Очистить",
+    "type" : "reset"
     }
   },
   "Nav": {
@@ -66,41 +66,38 @@
   "skills": {
     "Frontend": {
       "name1": {
-        "title": "HTML"
+        "title": "HTML5 & PUG(jade)"
       },
       "name2": {
-        "title": "css"
+        "title": "CSS3 $ PostCSS"
       },
       "name3": {
-        "title": "bla"
+        "title": "JS EC6 & jQuery"
+      },
+      "name4": {
+        "title": "SASS & LESS"
       }
     },
     "Backend": {
       "name1": {
-        "title": "awe"
+        "title": "node.js & express"
       },
       "name2": {
-        "title": "awesd, sera, ewrwe, wweq"
-      },
-      "name3": {
-        "title": "bqwela"
-      },
-      "name4": {
-        "title": "qwea"
+        "title": "MongoDB"
       }
     },
     "WorkFlow": {
       "name1": {
-        "title": "qwe2"
+        "title": "bootstrap"
       },
       "name2": {
-        "title": "wwww, 222, aaaa"
+        "title": "GIT"
       },
       "name3": {
-        "title": "rtyu"
+        "title": "Gulp"
       },
       "name4": {
-        "title": "ererw ere"
+        "title": "NPM & Bower"
       }
     }
   },
@@ -111,8 +108,8 @@
         "svg": "../assets/img/contact/skype.svg"
     },
     "tel": {
-      "href":"teL:+89680082827",
-       "title": "89680082827",
+      "href":"teL:+89164891481",
+       "title": "89164891481",
        "svg": "../assets/img/contact/phone.svg"
     },
     "email": {

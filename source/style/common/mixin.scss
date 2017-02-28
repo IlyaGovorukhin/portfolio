@@ -159,10 +159,12 @@
 
 @keyframes shake {
   0%{
+
     stroke-width: rem(-1);
   }
 
   100%{
+
     stroke-width: rem(2);
   }
 }

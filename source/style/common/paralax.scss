@@ -32,13 +32,17 @@
   width: 100%;
   height: 100%;
 }
-video {
+.video {
   min-width: 100%;
+  min-height: 100vh;
   margin-left: - 50%;
   position: absolute;
   margin: 0 auto;
   top: 0;
   z-index: -1;
+  background-image: url("../img/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .conteiner_paralax, .conteiner_paralax--works {
@@ -169,7 +173,8 @@ cursor: pointer;
    cursor: pointer;
 }
 #humburger path {
-  transition: fill-opacity .3s;
+  transition: all linear 0.2s;
+
 }
 #humburger   {
   &:hover {

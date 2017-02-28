@@ -21,7 +21,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  overflow: hidden;
+
   @include fullscreen();
 }
 
@@ -53,7 +53,7 @@
 .positin_blur {
   position: relative;
   border-radius: rem(5) rem(5) 0 0;
-  overflow: hidden;
+
 }
 .positin_blur-ofset {
   @include centered();
@@ -68,12 +68,18 @@ background-position-x: center;
 }
 .position-Zindex {
   z-index: 1;
+  width: 100%;
 }
 .bor-rad {
   border-radius: rem(5);
 }
-.conteiner_center-up--input.bor-rad {
+.padding_correct {
+  box-sizing: border-box;
+  padding: 0 rem(20);
+}
+.bor-rad {
   resize: none;
+
 }
 .welcome-nav__item--Pull,.welcome-nav__item--Clin {
 max-width: 50%;
@@ -93,7 +99,15 @@ max-width: 50%;
   @include wide(){
     margin-top: -14px;
   }
+}
 
-
-
+.conteiner_center-up--form {
+  width: 100%;
+}
+.botom_correct {
+  bottom: -12%;
+}
+.Clin, .Pull{
+  border: none;
+  width: 100%;
 }

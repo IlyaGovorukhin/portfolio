@@ -92,3 +92,19 @@
   display: none;
   opacity: 0;
 }
+#humburger_line1,#humburger_line2{
+  transform-origin: 50% 50%;
+}
+
+.movelineOne{
+  transition: all linear 0.2s;
+transform: translateY(15px) rotate(45deg);
+}
+.movelineTwo{
+  transition: all linear 0.2s;
+transform: rotate(-45deg);
+}
+.movelineThree{
+  transition: all linear 0.2s;
+  display: none;
+}

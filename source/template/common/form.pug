@@ -5,14 +5,14 @@
                             .conteiner_center-up--textback  Отправить e-mail
                             .conteiner_center-up--autoback.position-Zindex
                                 form.conteiner_center-up--form
-                                    .conteiner_center-up--dsail
-                                        input(name='login' placeholder="Имя" required).conteiner_center-up--input.bor-rad
-                                    .conteiner_center-up--dsail
-                                        input(name='pasword' placeholder="Email" required).conteiner_center-up--input.bor-rad
-                                    .conteiner_center-up--dsail
-                                       textarea(name="contactmessage", cols="30", rows="4", placeholder="Ваше сообщение").conteiner_center-up--input.bor-rad
-           .conteiner_center-down
-                +navigation("welcome-nav", Email)
+                                    .conteiner_center-up--dsail.padding_correct
+                                        input(type= "text" name='posName' placeholder="Имя" required).conteiner_center-up--input.bor-rad#name
+                                    .conteiner_center-up--dsail.padding_correct
+                                        input(type="email" name='posEmail' placeholder="Email" required).conteiner_center-up--input.bor-rad#email
+                                    .conteiner_center-up--dsail.padding_correct
+                                       textarea(name="posText", cols="30", rows="4", placeholder="Ваше сообщение").conteiner_center-up--input.bor-rad#texarial
+                                    .conteiner_center-down.botom_correct
+                                            +navigationPush("welcome-nav", Email)
     .pageform-arrow
         svg#form-arrow(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='43px', height='28px', viewbox='0 0 42.736 27.435', enable-background='new 0 0 42.736 27.435', xml:space='preserve')
             g
