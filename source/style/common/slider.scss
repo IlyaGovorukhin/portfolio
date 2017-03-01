@@ -3,7 +3,7 @@
   width: 100%;
   @include clearfix;
   min-height: rem(650);
-  background: #f0efe9;
+  background: #ffffff;
   @include fullscreen();
 
 
@@ -205,7 +205,7 @@
   background-color: #00bfa5;
   margin: 0 auto;
   border-radius: rem(5);
-  color: #fcfcfc;
+  color: #fff;
   text-align: center;
   line-height: rem(50);
   transition: background-color .4s;

@@ -73,7 +73,7 @@
 
 }
 .conteiner_center-up--font,.conteiner_center-up{
-  background-color: rgba(#fcfcfc, 0.8);
+  background-color: rgba(#ffffff, 0.8);
   width: 100%;
   height: 87.37373737373737%;
 }
@@ -195,14 +195,14 @@ position: absolute;
 right: rem(100);
 top: rem(45);
 border-radius: rem(5);
-border: rem(1) solid #fcfcfc;
+border: rem(1) solid #ffffff;
 transition: background,color .3s;
 
 text-align: center;
-color: #fcfcfc;
+color: #fff;
   font-family: Roboto-Light;
    &:hover {
-     background: #fcfcfc;
+     background: #fff;
      color:  rgba(0, 191, 165, 0.8);
    }
   @include phone {

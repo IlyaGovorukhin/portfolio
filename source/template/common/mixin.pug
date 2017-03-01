@@ -19,8 +19,8 @@ mixin skills(className, items)
             each item, ndx in items
                 li(class= className + "__item ")
                         svg(class= className + "__item--svg " + className + "__item--"  + ndx)
-                            circle(stroke="#ccc")
-                            circle(stroke="#e8a731")
+                            circle(stroke="#ccc" cx="75" cy="75" r="65" stroke-width ="20")
+                            circle(stroke="#e8a731" cx="75" cy="75" r="65" stroke-width = "20")
                         div(class= className + "__item--text " + ndx)= item.title
 
 

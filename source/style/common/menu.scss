@@ -68,17 +68,18 @@
     &:after {
       @include avter_befor {
         left: -3rem;
-        background: #fcfcfc;
+        background: #ffffff;
       };
     }
     &:before {
       @include avter_befor{
         right: -3rem;
-        background: #fcfcfc;
+        background: #ffffff;
       };
     }
   }
 }
+
 .textanim{
   animation-name: bounceIn;
   animation-fill-mode: both;
@@ -94,6 +95,8 @@
 }
 #humburger_line1,#humburger_line2{
   transform-origin: 50% 50%;
+  -moz-transform-origin: 57% 34%;
+
 }
 
 .movelineOne{
